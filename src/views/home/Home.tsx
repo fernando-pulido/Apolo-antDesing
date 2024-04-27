@@ -1,5 +1,6 @@
 import CardItem from '../../components/card/Cards'
 import Dashboard from '../../layout/layout'
+
 const Home = () => {
   return (
     <Dashboard>

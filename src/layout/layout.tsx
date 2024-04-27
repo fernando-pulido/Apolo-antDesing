@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import type { PropsWithChildren } from 'react'
-
 import { useNavigate } from 'react-router-dom'
-
 import { Layout } from 'antd'
+
+import type { PropsWithChildren } from 'react'
 import type { MenuProps } from 'antd'
+
 import CustomSiderProps from '../components/sider/Sider'
 import HeaderDasboard from '../components/header/Header'
+
 import './content.css'
 
 const { Content, Footer } = Layout
