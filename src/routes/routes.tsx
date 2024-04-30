@@ -1,7 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import Dashboard from '../layout/layout'
-import Home from '../views/home/Home'
-import Assists from '../views/assists/Assists'
+import Dashboard from '../layout/Index'
+import Home from '../views/Home/Home'
+import Assists from '../views/Assists/Assists'
+import Login from '../views/Login/Login'
 
 export default function RoutesPrivate() {
   return (
@@ -9,8 +10,9 @@ export default function RoutesPrivate() {
       <BrowserRouter>
         <Routes>
           <Route index path="/" element={<Dashboard />}></Route>
-          <Route path="/index" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
           <Route path="/assists" element={<Assists />}></Route>
+          <Route path="/login" element={<Login />}></Route>
           <Route path="*" element={<Navigate replace to="/" />}></Route>
         </Routes>
       </BrowserRouter>

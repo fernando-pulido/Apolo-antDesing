@@ -12,7 +12,7 @@ const CardItem: React.FC<CardProps> = ({ title, NumberClients, className }) => (
     className={className}
     title={title}
     bordered={false}
-    style={{ width: 500 }}
+    style={{ width: 450 }}
   >
     <h1>{NumberClients}</h1>
   </Card>

@@ -5,10 +5,10 @@ import { Layout } from 'antd'
 import type { PropsWithChildren } from 'react'
 import type { MenuProps } from 'antd'
 
-import CustomSiderProps from '../components/sider/Sider'
-import HeaderDasboard from '../components/header/Header'
+import CustomSider from '../components/CustomSider/Index'
+import HeaderDashboard from '../components/HeaderDashboard/Index'
 
-import './content.css'
+import './layout.css'
 
 const { Content, Footer } = Layout
 
@@ -17,26 +17,33 @@ const Dashboard = ({ children }: PropsWithChildren) => {
 
   const [collapsed, setCollapsed] = useState(false)
 
-  const handlerMenu: MenuProps['onClick'] = e => {
-    if (e.key === '1') {
-      navigate('/index')
+  const handleMenu: MenuProps['onClick'] = e => {
+    if (e.key === 'Inicio') {
+      navigate('/home')
     }
-    if (e.key === '2') {
+    if (e.key === 'Asistencia') {
       navigate('/assists')
+    }
+    if (e.key === 'Admin') {
+      console.log('first')
+    }
+    if (e.key === 'Login') {
+      console.log('first 5')
+      navigate('/login')
     }
   }
 
   return (
     <Layout>
-      <CustomSiderProps collapsed={collapsed} handlerMenu={handlerMenu} />
+      <CustomSider collapsed={collapsed} handleMenu={handleMenu} />
       <Layout>
-        <HeaderDasboard
+        <HeaderDashboard
           onClick={() => setCollapsed(!collapsed)}
           collapsed={collapsed}
         />
         <Content className="content">{children}</Content>
         <Footer className="footer" style={{ textAlign: 'center' }}>
-          Ant Design ©{new Date().getFullYear()} Created by Ant UED
+          Fernando pulido©{new Date().getFullYear()} Created by Ant UED
         </Footer>
       </Layout>
     </Layout>

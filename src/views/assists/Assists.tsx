@@ -1,11 +1,15 @@
-import Dashboard from '../../layout/layout'
+import TableAssists from '../../components/TableAssists/Index'
+import Dashboard from '../../layout/Index'
 
 const Assists = () => {
   return (
     <Dashboard>
-      <div>
-        <h1>griselda</h1>
-      </div>
+      {
+        <div>
+          <h1>ASISTENCIA TOTAL</h1>
+          <TableAssists />
+        </div>
+      }
     </Dashboard>
   )
 }

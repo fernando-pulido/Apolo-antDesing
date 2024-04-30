@@ -8,7 +8,7 @@ type ButtonProps = {
   onClick: () => void
 }
 
-const HeaderDasboard = ({ collapsed, onClick }: ButtonProps) => {
+const HeaderDashboard = ({ collapsed, onClick }: ButtonProps) => {
   return (
     <Header className="header">
       <Button
@@ -20,4 +20,4 @@ const HeaderDasboard = ({ collapsed, onClick }: ButtonProps) => {
     </Header>
   )
 }
-export default HeaderDasboard
+export default HeaderDashboard
