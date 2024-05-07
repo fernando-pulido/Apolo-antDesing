@@ -1,19 +1,20 @@
 /* Home.css */
 .target {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan en nuevas líneas */
-  justify-content: space-between; /* Asegura que haya espacio entre las columnas */
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .card,
 .expire {
-  flex: 1 0 calc(50% - 10px); /* Cada elemento ocupa al menos la mitad del ancho disponible, menos 10px para el margen */
-  margin-bottom: 20px; /* Espacio entre las filas */
-  margin-right: 5px; /* Espacio entre las columnas */
+  flex: 1 0 30%; /* Esto significa que cada tarjeta ocupará al menos el 30% del ancho disponible */
+  margin-bottom: 20px; /* Espacio entre las tarjetas */
 }
 
-/* Para el último elemento en cada fila */
-.card:last-child,
-.expire:last-child {
-  margin-right: 0; /* Elimina el margen derecho del último elemento en cada fila */
+/* Para dispositivos más pequeños, ajusta el tamaño de las tarjetas */
+@media (max-width: 768px) {
+  .card,
+  .expire {
+    flex: 1 0 45%; /* En pantallas más pequeñas, cada tarjeta ocupará al menos el 45% del ancho disponible */
+  }
 }

@@ -1,35 +1,32 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Router, useNavigate } from 'react-router-dom'
 import { Layout } from 'antd'
-
 import type { PropsWithChildren } from 'react'
 import type { MenuProps } from 'antd'
-
 import CustomSider from '../components/CustomSider/Index'
 import HeaderDashboard from '../components/HeaderDashboard/Index'
-
+import { Route, Routes } from 'react-router-dom'
+import Home from '../views/Home/Home'
+import Assists from '../views/Assists/Assists'
 import './layout.css'
 
 const { Content, Footer } = Layout
 
 const Dashboard = ({ children }: PropsWithChildren) => {
+  const [collapsed, setCollapsed] = useState(false)
   const navigate = useNavigate()
 
-  const [collapsed, setCollapsed] = useState(false)
-
   const handleMenu: MenuProps['onClick'] = e => {
-    if (e.key === 'Inicio') {
-      navigate('/home')
-    }
-    if (e.key === 'Asistencia') {
-      navigate('/assists')
-    }
-    if (e.key === 'Admin') {
-      console.log('first')
-    }
-    if (e.key === 'Login') {
-      console.log('first 5')
-      navigate('/login')
+    switch (e.key) {
+      case 'Inicio':
+        navigate('/')
+        break
+      case 'Asistencia':
+        navigate('/assists')
+        break
+
+      default:
+        break
     }
   }
 
@@ -41,7 +38,15 @@ const Dashboard = ({ children }: PropsWithChildren) => {
           onClick={() => setCollapsed(!collapsed)}
           collapsed={collapsed}
         />
+
         <Content className="content">{children}</Content>
+
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="assists" element={<Assists />} />
+          </Routes>
+        </Router>
         <Footer className="footer" style={{ textAlign: 'center' }}>
           Fernando pulido©{new Date().getFullYear()} Created by Ant UED
         </Footer>

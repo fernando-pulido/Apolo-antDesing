@@ -1,8 +1,7 @@
-import './App.css'
-import RoutesPrivate from './routes/routes'
+import Dashboard from './layout/Layout'
 
-const App = () => {
-  return <RoutesPrivate />
+const App: React.FC = () => {
+  return <Dashboard />
 }
 
 export default App

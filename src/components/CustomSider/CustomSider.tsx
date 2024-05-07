@@ -32,15 +32,25 @@ const items: Items[] = [
     key: 'Asistencia',
   },
   {
+    label: 'Login',
+    icon: <UploadOutlined />,
+    key: 'Login',
+  },
+  {
     label: 'Admin',
     icon: <VideoCameraOutlined />,
     key: 'Admin',
   },
 
   {
-    label: 'Login',
+    label: 'Clientes',
     icon: <UploadOutlined />,
-    key: 'Login',
+    key: 'Clientes',
+  },
+  {
+    label: 'Proveedores',
+    icon: <VideoCameraOutlined />,
+    key: 'Proveedores',
   },
   {
     label: 'Salir',
