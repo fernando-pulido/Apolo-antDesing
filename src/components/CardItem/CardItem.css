@@ -1,0 +1,15 @@
+/* CardsItems.css */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Define tres columnas de igual tamaño */
+  grid-template-rows: repeat(2, 1fr); /* Define dos filas de igual tamaño */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.card-item {
+  border: 1px solid #ccc; /* Borde opcional para las tarjetas */
+  padding: 20px; /* Espacio interno de las tarjetas */
+}

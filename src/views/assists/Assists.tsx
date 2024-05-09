@@ -1,7 +1,9 @@
+import TableAssists from '../../components/TableAssists/TableAssists'
+
 const Assists = () => {
   return (
     <div>
-      <h1>hola soy assists</h1>
+      <TableAssists />
     </div>
   )
 }

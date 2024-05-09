@@ -1,6 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 import type { FormProps } from 'antd'
-import { Button, Checkbox, Form, Input } from 'antd'
+import { Button, Form, Input } from 'antd'
+
 import './Login.css'
 
 type FieldType = {
@@ -17,7 +18,10 @@ const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = errorInfo => {
   console.log('Failed:', errorInfo)
 }
 
-const LoginUser: React.FC = () => (
+const { Item: Element } = Form
+const Item = Element<FieldType>
+
+const LoginUser: FC = () => (
   <div className="login">
     <h1>Login Apolo</h1>
 
@@ -31,35 +35,27 @@ const LoginUser: React.FC = () => (
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
-      <Form.Item<FieldType>
+      <Item
         label="Username"
         name="username"
         rules={[{ required: true, message: 'Please input your username!' }]}
       >
         <Input />
-      </Form.Item>
+      </Item>
 
-      <Form.Item<FieldType>
+      <Item
         label="Password"
         name="password"
         rules={[{ required: true, message: 'Please input your password!' }]}
       >
         <Input.Password />
-      </Form.Item>
+      </Item>
 
-      <Form.Item<FieldType>
-        name="remember"
-        valuePropName="checked"
-        wrapperCol={{ offset: 8, span: 16 }}
-      >
-        <Checkbox>Remember me</Checkbox>
-      </Form.Item>
-
-      <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+      <Item wrapperCol={{ offset: 8, span: 16 }}>
         <Button type="primary" htmlType="submit">
           Submit
         </Button>
-      </Form.Item>
+      </Item>
     </Form>
   </div>
 )

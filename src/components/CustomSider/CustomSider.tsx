@@ -1,5 +1,5 @@
-import { Layout, Menu, MenuProps } from 'antd'
-
+import { Layout, Menu } from 'antd'
+import { Link } from 'react-router-dom'
 import {
   UserOutlined,
   VideoCameraOutlined,
@@ -11,55 +11,57 @@ const { Sider } = Layout
 
 export type CustomSiderProps = {
   collapsed: boolean
-  handleMenu: MenuProps['onClick']
 }
 
 type Items = {
-  label: string
+  label: ReactElement
   icon: ReactElement
   key: string
+}
+const LINKS = {
+  home: '/home',
+  assists: '/assists',
+  login: '/login',
+  admin: '/admin',
+  clientes: '/clientes',
+  proveedores: '/proveedores',
 }
 
 const items: Items[] = [
   {
-    label: 'Inicio',
+    label: <Link to={LINKS.home}>Inicio</Link>,
     icon: <UserOutlined />,
     key: 'Inicio',
   },
   {
-    label: 'Asistencia',
+    label: <Link to={LINKS.assists}>Assistencia</Link>,
     icon: <VideoCameraOutlined />,
     key: 'Asistencia',
   },
   {
-    label: 'Login',
+    label: <Link to={LINKS.login}>login</Link>,
     icon: <UploadOutlined />,
     key: 'Login',
   },
   {
-    label: 'Admin',
+    label: <Link to={LINKS.admin}>Admin</Link>,
     icon: <VideoCameraOutlined />,
     key: 'Admin',
   },
 
   {
-    label: 'Clientes',
+    label: <Link to={LINKS.clientes}>Clientes</Link>,
     icon: <UploadOutlined />,
     key: 'Clientes',
   },
   {
-    label: 'Proveedores',
+    label: <Link to={LINKS.proveedores}>proveedores</Link>,
     icon: <VideoCameraOutlined />,
     key: 'Proveedores',
   },
-  {
-    label: 'Salir',
-    icon: <UploadOutlined />,
-    key: 'Salir',
-  },
 ]
 
-const CustomSider = ({ collapsed, handleMenu }: CustomSiderProps) => (
+const CustomSider = ({ collapsed }: CustomSiderProps) => (
   <Sider className="sider" trigger={null} collapsible collapsed={collapsed}>
     <div className="demo-logo-vertical" />
     <Menu
@@ -67,7 +69,6 @@ const CustomSider = ({ collapsed, handleMenu }: CustomSiderProps) => (
       theme="dark"
       mode="inline"
       defaultSelectedKeys={['1']}
-      onClick={handleMenu}
     />
   </Sider>
 )
