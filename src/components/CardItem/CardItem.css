@@ -1,15 +1,14 @@
 /* CardsItems.css */
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(
-    3,
-    1fr
-  ); /* Define tres columnas de igual tamaño */
-  grid-template-rows: repeat(2, 1fr); /* Define dos filas de igual tamaño */
-  gap: 20px; /* Espacio entre las tarjetas */
+.card-item {
+  margin: 20px; /* Espacio alrededor de cada tarjeta */
 }
 
-.card-item {
-  border: 1px solid #ccc; /* Borde opcional para las tarjetas */
-  padding: 20px; /* Espacio interno de las tarjetas */
+/* Si deseas agregar espacio entre las tarjetas, puedes hacerlo aquí */
+/* Por ejemplo, si estás usando flexbox o grid, puedes ajustar el gap */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Ajusta el espacio entre las tarjetas */
+  gap: 10px; /* Espacio entre las tarjetas */
 }
