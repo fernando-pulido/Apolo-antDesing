@@ -21,7 +21,7 @@ const Dashboard = () => {
         <CustomSider collapsed={collapsed} />
         <Layout>
           <HeaderDashboard onClick={handleCollapsed} collapsed={collapsed} />
-          <Content>
+          <Content className="content">
             <RoutesPrivate />
           </Content>
           <Footer className="footer" style={{ textAlign: 'center' }}>

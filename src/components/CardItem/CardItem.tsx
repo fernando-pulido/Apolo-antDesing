@@ -1,15 +1,19 @@
 import React from 'react'
-import { Card, Col } from 'antd'
+import { Card } from 'antd'
 
 import './CardItem.css'
 type CardProps = {
   title: string
   numberClients: number
+  information?: string
 }
 
 const Cards: CardProps[] = [
   { title: 'Total de clientes', numberClients: 150 },
-  { title: 'Clientes nuevos', numberClients: 10 },
+  {
+    title: 'Clientes nuevos',
+    numberClients: 10,
+  },
   { title: 'Clientes activos', numberClients: 100 },
   { title: 'Proximos a vencer ', numberClients: 150 },
   { title: 'Clientes a credito', numberClients: 10 },
@@ -17,17 +21,15 @@ const Cards: CardProps[] = [
 ]
 
 const CardItem: React.FC<CardProps> = ({ title, numberClients }) => (
-  <Card title={title} bordered={false} style={{ width: 450 }}>
+  <Card className="card" title={title} bordered={false}>
     <h1>{numberClients}</h1>
   </Card>
 )
 
 export const CardsItems = () => (
-  <div className="cards-container">
+  <div className="container">
     {Cards.map((card, index) => (
-      <Col span={8} key={index}>
-        <CardItem key={index} {...card} />
-      </Col>
+      <CardItem key={index} {...card} />
     ))}
   </div>
 )
