@@ -2,7 +2,8 @@ import React from 'react'
 import { Card } from 'antd'
 
 import './CardItem.css'
-type CardProps = {
+
+export type CardProps = {
   title: string
   numberClients: number
   information?: string
@@ -10,18 +11,15 @@ type CardProps = {
 
 const Cards: CardProps[] = [
   { title: 'Total de clientes', numberClients: 150 },
-  {
-    title: 'Clientes nuevos',
-    numberClients: 10,
-  },
+  { title: 'Clientes nuevos', numberClients: 10 },
   { title: 'Clientes activos', numberClients: 100 },
-  { title: 'Proximos a vencer ', numberClients: 150 },
-  { title: 'Clientes a credito', numberClients: 10 },
-  { title: 'Cumpleaños de clientes ', numberClients: 100 },
+  { title: 'Proximos a vencer ', numberClients: 110 },
+  { title: 'Clientes a credito', numberClients: 14 },
+  { title: 'Cumpleaños de clientes ', numberClients: 90 },
 ]
 
 const CardItem: React.FC<CardProps> = ({ title, numberClients }) => (
-  <Card className="card" title={title} bordered={false}>
+  <Card title={title} bordered={false}>
     <h1>{numberClients}</h1>
   </Card>
 )

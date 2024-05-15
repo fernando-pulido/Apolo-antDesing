@@ -1,15 +1,20 @@
-import { CardsItems } from '../../components/CardItem/CardItem'
+import { CardsItems } from '../../components/Cards/CardItem/CardItem'
+import CardIncome from '../../components/Cards/CardIncome/CardIncome'
 import BarGraphic from '../../components/graphics/BarGraphic'
 import BarGraphicweek from '../../components/graphics/BarGraphicweek'
+
 import './Home.css'
 
 const Home = () => {
   return (
-    <div className="target">
+    <div>
       <CardsItems />
+      <CardIncome />
 
-      <BarGraphic />
-      <BarGraphicweek />
+      <div>
+        <BarGraphic />
+        <BarGraphicweek />
+      </div>
     </div>
   )
 }

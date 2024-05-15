@@ -1,4 +1,4 @@
-import { Layout } from 'antd'
+import { Affix, Layout } from 'antd'
 import { useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -19,6 +19,7 @@ const Dashboard = () => {
     <Layout>
       <Router>
         <CustomSider collapsed={collapsed} />
+
         <Layout>
           <HeaderDashboard onClick={handleCollapsed} collapsed={collapsed} />
           <Content className="content">

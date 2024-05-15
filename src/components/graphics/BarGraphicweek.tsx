@@ -55,7 +55,7 @@ const misoptions: Options = {
   scales: {
     y: {
       min: -25,
-      max: 100,
+      max: 90,
     },
     x: {
       ticks: {
@@ -87,7 +87,7 @@ const midata = {
 }
 
 const BarGraphicweek: React.FC = () => {
-  return <Bar data={midata} options={misoptions} />
+  return <Bar className="bar" data={midata} options={misoptions} />
 }
 
 export default BarGraphicweek

@@ -1,4 +1,4 @@
-import TableAssists from '../../components/TableAssists/TableAssists'
+import TableAssists from '../../components/tables/TableAssists/TableAssists'
 
 const Assists = () => {
   return (
