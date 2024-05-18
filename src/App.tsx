@@ -1,7 +1,5 @@
-import Dashboard from './layout/Layout'
+import Dashboard from './Layouts/Dashboard'
 
-const App: React.FC = () => {
-  return <Dashboard />
-}
+const App = () => <Dashboard />
 
 export default App

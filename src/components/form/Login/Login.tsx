@@ -4,29 +4,26 @@ import { Button, Form, Input } from 'antd'
 
 import './Login.css'
 
-type FieldType = {
+export type FieldType = {
   username?: string
   password?: string
   remember?: string
 }
 
-const onFinish: FormProps<FieldType>['onFinish'] = values => {
-  console.log('Success:', values)
-}
-
-const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = errorInfo => {
-  console.log('Failed:', errorInfo)
+type LoginProps = {
+  onFinish: FormProps<FieldType>['onFinish']
+  onFinishFailed: FormProps<FieldType>['onFinishFailed']
+  title: string
 }
 
 const { Item: Element } = Form
 const Item = Element<FieldType>
 
-const LoginUser: FC = () => (
+const LoginUser: FC<LoginProps> = ({ onFinish, onFinishFailed, title }) => (
   <div className="login">
-    <h1>Login Apolo</h1>
+    <h1>{title}</h1>
 
     <Form
-      name="basic"
       labelCol={{ span: 8 }}
       wrapperCol={{ span: 16 }}
       style={{ maxWidth: 600 }}
