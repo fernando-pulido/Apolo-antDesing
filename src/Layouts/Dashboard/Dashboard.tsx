@@ -1,33 +1,32 @@
-import { Affix, Layout } from 'antd'
+import { Layout } from 'antd'
 import { useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import RoutesPrivate from '../routes/routes'
-import CustomSider from '../components/CustomSider/Index'
-import HeaderDashboard from '../components/HeaderDashboard/Index'
+import RoutesPrivate from '../../routes/routes'
+import CustomSider from '../../components/CustomSider'
+import HeaderDashboard from '../../components/HeaderDashboard'
 
-import './layout.css'
+import styles from './Dashboard.module.css'
 
 const { Content, Footer } = Layout
 
 const Dashboard = () => {
-  const [collapsed, setCollapsed] = useState(false)
+  const [collapsed, setCollapsed] = useState<boolean>(false)
 
   const handleCollapsed = () => setCollapsed(!collapsed)
+
+  const textFooter = `Apolo gym©${new Date().getFullYear()} team`
 
   return (
     <Layout>
       <Router>
         <CustomSider collapsed={collapsed} />
-
         <Layout>
           <HeaderDashboard onClick={handleCollapsed} collapsed={collapsed} />
-          <Content className="content">
+          <Content className={styles.content}>
             <RoutesPrivate />
           </Content>
-          <Footer className="footer" style={{ textAlign: 'center' }}>
-            Apolo gym©{new Date().getFullYear()} team
-          </Footer>
+          <Footer className={styles['footer-dashboard']}>{textFooter}</Footer>
         </Layout>
       </Router>
     </Layout>

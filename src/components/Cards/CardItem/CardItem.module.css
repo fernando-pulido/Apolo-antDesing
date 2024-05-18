@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-3 {
+  width: 32%;
+}

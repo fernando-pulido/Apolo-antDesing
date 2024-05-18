@@ -1,0 +1,15 @@
+.content {
+  margin: 24px 16px;
+  padding: 24px;
+  min-height: 824px;
+}
+
+.footer-dashboard {
+  background-color: #015 !important;
+  text-align: center;
+  color: white;
+  font {
+    family: var(--font);
+    size: 1.2em;
+  }
+}
