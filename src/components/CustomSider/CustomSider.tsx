@@ -34,7 +34,7 @@ const items: Items[] = [
     key: 'Inicio',
   },
   {
-    label: <Link to={LINKS.assists}>Assistencia</Link>,
+    label: <Link to={LINKS.assists}>Asistencia</Link>,
     icon: <VideoCameraOutlined />,
     key: 'Asistencia',
   },

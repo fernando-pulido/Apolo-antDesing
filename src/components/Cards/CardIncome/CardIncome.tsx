@@ -5,7 +5,7 @@ import { CARDS } from './mock'
 import './CardIncome.css'
 
 const CardIncome = () => (
-  <>
+  <div className="cardsItems">
     {CARDS.map(({ amount, month, title, today, week }, index) => (
       <Card title={title} bordered={false} key={index}>
         <Row gutter={20}>
@@ -24,7 +24,7 @@ const CardIncome = () => (
         </Row>
       </Card>
     ))}
-  </>
+  </div>
 )
 
 export default CardIncome

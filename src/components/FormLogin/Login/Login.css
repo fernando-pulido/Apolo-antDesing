@@ -1,0 +1,91 @@
+/* Contenedor principal del login: centro en la pantalla */
+.login {
+  display: flex; /* Utiliza flexbox para centrar los elementos */
+  flex-direction: column; /* Dispone los elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  min-height: 100vh; /* La altura mínima es el 100% de la ventana gráfica */
+  background-color: #f0f2f5; /* Fondo claro para contraste */
+}
+
+/* Contenedor del formulario: define la apariencia del formulario */
+.login-container {
+  display: flex; /* Utiliza flexbox para centrar el contenido */
+  flex-direction: column; /* Dispone los elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  padding: 40px 20px; /* Espaciado interior del contenedor */
+  border: 1px solid #ccc; /* Borde del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: black; /* Fondo blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+  max-width: 400px; /* Ancho máximo del contenedor */
+  width: 100%; /* El contenedor ocupa el 100% del espacio disponible */
+}
+
+.login img {
+  max-width: 250px; /* Tamaño máximo de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 20px; /* Espacio inferior de la imagen */
+}
+
+/* Estilo del formulario: establece el ancho del formulario */
+.custom-form {
+  width: 95%; /* El formulario ocupa el 95% del ancho del contenedor */
+}
+
+/* Cambiar color del borde de los inputs y ampliar su tamaño */
+.custom-form .ant-input,
+.custom-form .ant-input-password {
+  border-color: #d9d9d9; /* Color del borde de los inputs */
+  width: 100%; /* El input ocupa el 100% del ancho disponible */
+}
+
+.custom-form .ant-input:focus,
+.custom-form .ant-input:hover,
+.custom-form .ant-input-password:focus,
+.custom-form .ant-input-password:hover {
+  border-color: #c50202; /* Color del borde al enfocar o pasar el mouse */
+  box-shadow: 0 0 0 2px rgba(197, 2, 2, 0.2); /* Efecto de sombra al enfocar */
+}
+
+/* Estilizar el botón de submit */
+.custom-form .ant-btn-primary {
+  background-color: #ffffff; /* Fondo blanco del botón */
+  color: #000000; /* Texto negro del botón */
+  border-color: #000000; /* Borde negro del botón */
+}
+
+.custom-form .ant-btn-primary:hover,
+.custom-form .ant-btn-primary:focus {
+  background-color: #ffffff; /* Fondo blanco al pasar el mouse o enfocar */
+  border-color: #c50202; /* Borde rojo al pasar el mouse o enfocar */
+  color: #000000; /* Texto negro al pasar el mouse o enfocar */
+  box-shadow: 0 0 0 2px rgba(197, 2, 2, 0.2); /* Efecto de sombra al pasar el mouse o enfocar */
+}
+
+/* Espacio entre los items del formulario */
+.custom-form .ant-form-item {
+  margin-bottom: 10px; /* Margen inferior para separar los items */
+}
+
+/* Estilo para los labels encima de los inputs */
+.custom-form .ant-form-item-label {
+  text-align: left; /* Alinea el texto del label a la izquierda */
+  margin-bottom: 5px; /* Espacio inferior del label */
+}
+
+.custom-form .ant-form-item-control {
+  text-align: left; /* Alinea el contenido del control a la izquierda */
+}
+
+.custom-form .ant-form-item-label > label {
+  color: white; /* Color del texto del label */
+  font-weight: bold; /* Texto del label en negrita */
+}
+
+/* Añadir margen al botón de submit */
+.custom-form .ant-form-item:last-child {
+  margin-top: 20px; /* Margen superior para separar del input anterior */
+  margin-bottom: 1px; /* Quita el margen inferior */
+}

@@ -1,7 +1,7 @@
 import CardsItems from '../../components/Cards/CardItem'
 import CardIncome from '../../components/Cards/CardIncome/CardIncome'
-import BarGraphic from '../../components/graphics/BarGraphic/BarGraphic'
-import BarGraphicweek from '../../components/graphics/BarGraphic/BarGraphicweek'
+import BarGraphic from '../../components/Graph/BarGraphic/BarGraphic'
+import BarGraphicweek from '../../components/Graph/BarGraphic/BarGraphicweek'
 
 import './Home.css'
 
