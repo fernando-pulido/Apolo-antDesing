@@ -52,7 +52,7 @@ const LoginUser: FC<LoginProps> = ({ onFinish, onFinishFailed }) => (
 
         <Item wrapperCol={{ offset: 8, span: 16 }}>
           <Button type="primary" htmlType="submit">
-            Ingresa ApoloGym
+            Login ApoloGym
           </Button>
         </Item>
       </Form>
